@@ -1,0 +1,135 @@
+<DOCTYPE! html>
+<html>
+  <head>
+
+     <style>
+
+        .header {
+  border:  12px  solid blue;
+  margin-top:  20px;
+  background: orange;
+  margin-left:  24%;
+  length: 300x;
+  width:  600px;
+  height: 60px;
+  color: blue;
+  text-align: center;
+  opacity: 80%;
+}
+
+       h1 {
+  margin: 0;
+  font-size: 40px;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+       button {
+         length: 210px;
+         width:  200px;
+         font-size: 25px;
+         font-weight: bold;
+         color: orange;
+         margin-left: 40%;
+         margin-top:  35px;
+         margin-bottom:  35px;
+         background-color: blue;     
+             }
+     html, body{
+  width: 100%; height: 100%;
+  background-color: orange;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  color: blue;
+}
+
+body{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  color:blue;
+}
+.box{
+  width: 1120px; height: 530px;
+  background-color: orange;
+  position: relative;
+}
+.box:after, .box:before{
+  filter:none;
+  z-index: -1;
+  content:'';
+  width: calc(100% + (50px * 2));
+  height: calc(100% + (50px * 2));
+  position: absolute;
+  display: block;
+  animation: border 10s ease-in-out infinite;
+  transform:translateX(-50px) translateY(-50px);
+  color: blue;
+}
+@keyframes border {
+  0%, 100% {
+    -webkit-clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+            clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+  }
+  50% {
+    -webkit-clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+            clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+  }
+}
+
+.box:after{
+  animation-delay: -5s;
+  background-color: blue;
+  clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+}
+.box:before {
+  background-color: blue;
+    clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+}
+
+.box:hover:after{
+  animation-delay: -0.1s;
+}
+.box:hover:before, .box:hover:after {
+
+          animation-duration: 0.2s;
+}
+
+
+    p  {
+      font-size: 23px;
+      font-weight bold;
+      margin-left: 12%;
+      color: blue;
+        }
+ 
+
+
+    </style>
+  </head>
+  <body>
+   <div class="box">
+
+    <header class="header">
+     <h1>History of the St. Louis Arch</h1>
+    </header>
+
+      <p><u>Where is it located:</u> St. Louis, Missouri</p>
+      <p><u>When built:</u> 1963-1965</p>
+      <p><u>When completed:</u> October 28, 1965</p>
+      <p><u>How long did it take to build:</u> 2 years 8 months</p>
+      <p><u>Who constructed the arch:</u> Earo Saarinen</p>
+      <p><u>What is it made of:</u> Stainless Steel</p>
+
+        <!-- Button -->
+
+          <button onclick="window.location.href='home.html'">
+  Home
+    </button>
+
+</div>
+  </body>
+</html>

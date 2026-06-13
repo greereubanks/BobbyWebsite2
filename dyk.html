@@ -1,0 +1,115 @@
+<DOCTYPE! html>
+<html>
+  <head>
+
+     <style>
+
+      body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+     .block {
+  position: relative;
+  width: 1000px;
+  height: 550px;
+  background: linear-gradient(0deg, #000, #272727);
+  margin-top: 3%;
+  margin-left: 12%;
+}
+
+     .block:before, .block:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #fb0094,
+#0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+    #0000ff, #00ff00,#ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+   @keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+   .block:after {
+  filter: blur(50px);
+}
+
+    h1  {
+      margin-left: 30%;
+      color:  orange;
+      font-size:  55px;
+      font-family: 'Syncopate', sans-serif;
+         }
+
+       button {
+         length: 210px;
+         width:  200px;
+         font-size: 25px;
+         font-weight: bold;
+         color: linear-gradient(45deg, #fb0094,
+#0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+    #0000ff, #00ff00,#ffff00, #ff0000);
+         margin-left: 40%;
+         margin-top:  35px;
+         margin-bottom:  35px;
+         background-color: orange;  
+             }
+
+     p  {
+      font-size:  40px;
+      margin-left: 8%;
+      color: orange;
+        }
+
+     </style>
+
+  </head>
+  <body>
+
+     <!--  Javascript for Changing lines -->   
+    
+ <div class="block">
+     <h1>Did You Know?</h1>
+
+     <p id="demo">Can presidents ride the tram to the top? Click here to find out!</p>
+  <script>
+document.getElementById("demo").addEventListener("click", myFunction);
+function myFunction() {
+    document.getElementById("demo").innerHTML = "No, but one has snuck on!";
+}
+  </script>
+
+     <p id="demo2">Whats special about the top piece of the arch? Click here to find out!</p>
+  <script>
+document.getElementById("demo2").addEventListener("click", myFunction);
+function myFunction() {
+    document.getElementById("demo2").innerHTML = "Nearly 700,000 signatures are in a time capsule in the top piece!";
+}
+  </script>
+
+        <!-- Button -->
+
+          <button onclick="window.location.href='home.html'">
+  Home
+    </button>
+   
+    </block>
+
+  </body>
+</html>

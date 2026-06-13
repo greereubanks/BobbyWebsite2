@@ -1,0 +1,118 @@
+<DOCTYPE! html>
+<html>
+  <head>
+    <style>
+
+      body  {
+       background-color: orange;
+       border:  15px ridge blue;
+            }
+
+      .slider {
+    width: 800px;
+    height: 450px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    animation: slide 16s infinite;
+}
+
+.slides img {
+    width: 25%;
+    height:  450px;
+    object-fit: contain;
+}
+
+@keyframes slide {
+    0%,20% {
+        transform: translateX(0);
+    }
+
+    25%,45% {
+        transform: translateX(-25%);
+    }
+
+    50%,70% {
+        transform: translateX(-50%);
+    }
+
+    75%,95% {
+        transform: translateX(-75%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+       .header {
+  border:  12px  ridge blue;
+  margin-top:  20px;
+  background: orange;
+  margin-left:  27%;
+  length: 200x;
+  width:  550px;
+  height: 80px;
+  color: blue;
+  text-align: center;
+  opacity: 80%;
+}
+
+       h1 {
+  margin: 0;
+  font-size: 45px;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+       button {
+         background: blue;
+         length: 210px;
+         width:  200px;
+         font-size: 25px;
+         font-weight: bold;
+         color: orange;
+         margin-left: 40%;
+         margin-top:  35px;
+         margin-bottom:  35px;
+              }
+
+    </style>
+  </head>
+  <body>
+
+         <!-- Header -->
+
+  <header class="header">
+
+    <h1>St. Louis Arch Images</h1>
+
+  </header>
+
+
+     <!-- Slider Images -->
+
+  <div class="slider">
+    <div class="slides">
+        <img src="slider1.jpg" alt="Image 1">
+        <img src="slider2.jpg" alt="Image 2">
+        <img src="slider3.jpg" alt="Image 3">
+        <img src="slider4.jpg" alt="Image 4">
+    </div>
+</div>
+
+        <!-- Button -->
+
+          <button onclick="window.location.href='home.html'">
+  Home
+    </button>
+
+  </body>
+</html>
